@@ -10,51 +10,51 @@ with all argument types.*/
 using namespace std;
 
 int power (int N, int P = 2) {
-	int number = N;
-	for (int i=1;i<P;i++) {
-		N *= number;
+	int result = 1;
+	for (int i=0;i<P;i++) {
+		result *= N;
 	}
-	return N;
+	return result;
 }
 
 double power (double N, int P = 2) {
-	int number = N;
-	for (int i=1;i<P;i++) {
-		N *= number;
+	double result = 1.0;
+	for (int i=0;i<P;i++) {
+		result *= N;
 	}
-	return N;
+	return result;
 }
 
 
 long power (long N, int P = 2) {
-	int number = N;
-	for (int i=1;i<P;i++) {
-		N *= number;
+	long result = 1L;
+	for (int i=0;i<P;i++) {
+		result *= N;
 	}
-	return N;
+	return result;
 }
 
 
 float power (float N, int P = 2) {
-	int number = N;
-	for (int i=1;i<P;i++) {
-		N *= number;
+	float result = 1.0f;
+	for (int i=0;i<P;i++) {
+		result *= N;
 	}
-	return N;
+	return result;
 }
 
 
 
-char power (char N, int P = 2) {
+void power (string N, int P = 2) {
 	for (int i=0;i<P;i++) {
-		cout << N;
+		cout << N << endl;
 	}
 } 
 
 int main() {
 	cout << power(8) << endl; //testing int
 	cout << power(5.25,3) << endl; //testing float
-	cout << power(123456,10) << endl;  //testing long
+	cout << power(123456L,10) << endl;  //testing long
 	cout << power(8.97432659249874524513123) << endl;
-	cout << power('a', 5) << endl; 
+	power("a", 5); 
 }
