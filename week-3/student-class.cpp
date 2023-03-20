@@ -1,4 +1,3 @@
-// ERROR IN SEARCH FUNCTION
 /* Create a class named 'Student' with Name, RollNo and PhoneNo as private data members. Include member functions getData() and putData() to input and print all details of the objects, respectively. Add a member function checkName() that accepts a name as input, checks if the name matches with the object Name. If yes, it prints all the details of the object with putData() function. Else, it prints
 the message “Names do not match”. Write a c++ code to implement this. */
 
@@ -34,8 +33,8 @@ class Student {
 
     /* Function to check the name */
     void CheckName(char name[30]) {
-      if (strcmp(Name, name)) putData();
-      else cout << "Names do not match";
+      if (strcmp(Name, name) == 0) putData();
+      else cout << "Names do not match" << endl;
     }
 
 };
@@ -52,8 +51,8 @@ int main () {
 
   /* Searching Name */
   char searchName[30];
-  cout << "Enter the name to search: "; 
   cin.ignore();
+  cout << "Enter the name to search: "; 
   cin.getline(searchName,30); // Getting user input
   S1.CheckName(searchName); // Calling the CheckName member function of Student
   
