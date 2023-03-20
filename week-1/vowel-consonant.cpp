@@ -5,7 +5,7 @@ using namespace std;
 
 int main () {
 	char alphabet; //The input will be stored in this
-	char vowels[5] = {'a','e','i','o','u','A', 'E', 'I', 'O', 'U'};
+	char vowels[10] = {'a','e','i','o','u','A', 'E', 'I', 'O', 'U'};
 
 	/* Collecting the alphabet from user */
 	cout << "Enter an alphabet: ";

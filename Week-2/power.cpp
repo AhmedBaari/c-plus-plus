@@ -1,3 +1,5 @@
+// ERROR IN LONG FUNCTION
+
 /*Raising a number ‘N’ to the power ‘P’ is the same as multiplying N by itself P times. Write
 a function called power() that takes N (double) and P (int) as input, and returns the result
 N*P as a double value. Use a default argument of 2 for P, so that if this argument is
@@ -17,9 +19,10 @@ with all argument types.*/
 #include <iostream>
 using namespace std;
 
+ // function overloading
 int power (int N, int P = 2) {
 	int result = 1;
-	for (int i=0;i<P;i++) {
+	for (int i=0;i<P;i++) { 
 		result *= N;
 	}
 	return result;
@@ -51,13 +54,14 @@ float power (float N, int P = 2) {
 	return result;
 }
 
-
+// for characters
 void power (char N, int P = 2) {
 	for (int i=0;i<P;i++) {
 		cout << N;
 	}
 } 
 
+// main function
 int main() {
 	cout << power(8) << endl; //testing int
 	cout << power(5.25,3) << endl; //testing float
