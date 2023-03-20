@@ -1,4 +1,3 @@
-// THIS PROGRAM SHOWS ERRORS BUT WORKS
 /*Create a class named Shape with
 private data members – ShapeName(char array), NoOfDimensions(int), Side1(double),Side2(double), Side3(double) and Perimeter(double). 
 Add the following member functions – 
@@ -61,6 +60,13 @@ public:
         }
         cout << "Perimeter: " << Perimeter << endl; // Print the perimeter
     }
+
+    // Function to set the sides
+	void setSide (int a=0,int b=0,int c=0) {
+		for (int i=0; i<NoOfDimensions; i++) {
+			((i==0) ? Side1=a : ((i==1) ? Side2=b : Side3=c));
+		}
+	}
 };
 
 // Main function
@@ -68,9 +74,9 @@ int main() {
     Shape myShape; // Create an object of type Shape
 
     // Set the data members using member functions
-    myShape.getName("Circle");
-    myShape.getNoOfDimensions(1);
-    myShape.Side1 = 5.0;
+    myShape.getName("Rectangle");
+    myShape.getNoOfDimensions(2);
+    myShape.setSide(5,6);
 
     // Compute the perimeter using member function
     myShape.computePerimeter();
