@@ -1,3 +1,5 @@
+/* In this program, we will take the scores of 5 players and then calculate their strike rate*/
+
 #include <iostream>
 using namespace std;
 
