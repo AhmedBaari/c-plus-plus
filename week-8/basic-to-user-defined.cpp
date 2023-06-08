@@ -31,8 +31,8 @@ public:
     }
 
     Distance (double d) {
-        double tot = d*MTF; // Metre to feet
-        feet = (int)tot; // Getting the integer part, that is the feet
+        double tot = d*3.28; // Metre to feet
+        feet = int(tot); // Getting the integer part, that is the feet
         inch = (tot - feet)*12; // Converting decimal part into inch
     }
 };
@@ -48,12 +48,13 @@ main () {
     d2.display_data();
 
     // Calling the conversion constructor
-    Distance d3(51.63);
+    double m1 = 51.63; //meters
+    Distance d3(m1);
     cout << "-- d3 (calling conversion constructor) --"  << endl;
     d3.display_data();
 
     // Trying the conversion constructor using an operator
-    d1 = 5.3;
+    d1 = 5.3; 
     d2 = 7.1; // This means that the conversion constructor can be used even after initializing
 
     cout << "-- d2 (d2 = 7.1) --"  << endl;

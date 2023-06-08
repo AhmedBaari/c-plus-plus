@@ -20,6 +20,8 @@ public:
     operator int () {
         return hour*3600 + minute*60 + second;
     }
+
+    
 };
 
 main () {

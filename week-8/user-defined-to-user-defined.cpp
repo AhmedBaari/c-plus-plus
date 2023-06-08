@@ -19,8 +19,8 @@ public:
 
     METRIC (IMPERIAL OBJ) {
         double total = OBJ.getFeet() * 30.48 + OBJ.getInches() * 2.54;
-        mtr = total / 100;
-z    }
+        mtr = total / 100;    
+    }
     operator IMPERIAL(){
         double total = mtr * 100 + cms;
         double feet = total / 30.48;
@@ -55,3 +55,13 @@ public:
         return inches;
     }
 };
+
+main () {
+    METRIC m1;
+    METRIC m2(2.3, 4.5);
+
+    IMPERIAL i1(23, 4);
+    METRIC m3(i1);
+
+    m3.display_data();
+}
