@@ -21,6 +21,8 @@ class triangle {
 };
 
 int main() {
+	/* This code takes 3 triangles as input, and finds the area of each of them. Then it compares the areas and prints the largest one on the screen. */
+
 	triangle a,b,c;
 	
 	/* Posting Details */

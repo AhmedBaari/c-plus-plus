@@ -1,5 +1,4 @@
-/* 
-2.     Create a Class Distance that has 2 members – Feet and Inch (double type). Add default and
+/* Create a Class Distance that has 2 members – Feet and Inch (double type). Add default and
 parameterized constructor that sets the values of the data members accordingly. Add a member function called convert_CM() that converts the object value to centimetres and displays the result. Add a destructor function also. Write a C++ code to implement this. */
 
 #include <iostream>
@@ -15,12 +14,14 @@ class Distance {
 		Distance():feet(0.0),inch(0.0){}
 
 		// Assigning input values to data members
-		Distance(double in_feet, double in_inches) { 
-			feet = in_feet;
-			inch = in_inches;
+		Distance(double feet1, double feet2) { 
+			feet = feet1;
+			inch = feet2;
 		}
 		
 		// Converting to centimeters
+		#include <cmath>
+
 		void convert_to_cm() {
 			double result = ((feet * 12) + inch) * 2.54;
 			cout << result << endl;

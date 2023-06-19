@@ -22,12 +22,17 @@ public:
         mtr = total / 100;    
     }
     operator IMPERIAL(){
+        // Convert meters to feet
         double total = mtr * 100 + cms;
         double feet = total / 30.48;
+
+        // Calculate inches
         double inches = (total / 2.54) - (feet * 12);
 
+        // Check for rounding error
         double inch_check = (total % 30.48) / 2.5;
 
+        // Return the result
         return IMPERIAL(feet, inches);
     };
 };
