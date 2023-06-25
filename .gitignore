@@ -33,3 +33,7 @@
 
 # test files
 test.cpp
+.devcontainer/devcontainer.json
+.gitignore
+.vscode/settings.json
+.gitignore
